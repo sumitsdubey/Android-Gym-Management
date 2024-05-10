@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/reg_bg"
+    android:orientation="vertical"
+    tools:context=".OTPActivity">
+
+    <ScrollView
+        android:background="#A4070707"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/reg_ll_bg"
+            android:layout_marginHorizontal="10dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter OTP Here"
+                android:textSize="30sp"
+                android:fontFamily="@font/baloo_bhai"
+                android:textColor="@color/my_primary_color"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_height="wrap_content"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:textColorHint="@color/white"
+                    android:hint="Enter OTP"
+                    app:counterTextColor="@color/my_primary_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_otp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textSize="18sp"
+                        android:maxLength="6"
+                        android:textColor="@color/my_primary_color"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#F60D0D"
+                        android:id="@+id/tv_error"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_resend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="If not Recieved! Resend Email "
+                android:textAlignment="center"
+                android:fontFamily="@font/baloo_bhai"
+                android:textSize="18sp"
+                android:onClick="resendEmail"
+                android:textColor="@color/my_primary_color"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/my_primary_color"
+                android:text="submit"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginHorizontal="15dp"
+                android:onClick="submitOtp"
+                android:layout_marginTop="25dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
